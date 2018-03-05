@@ -58,15 +58,15 @@ class BasicController extends Controller
                 "icon" => 'cog',
                 "m" => 'Admin',
                 "c" => 'questions',
-                "a" => 'questions-list',
+                "a" => 'question-list',
                 "data" => '',
                 "children" => [
                     array(
                         "name" => '题库列表',
                         "icon" => '',
                         "m" => 'Admin',
-                        "c" => 'Questions',
-                        "a" => 'questions-list',
+                        "c" => 'questions',
+                        "a" => 'question-list',
                         "data" => '',
                     )
                 ]
