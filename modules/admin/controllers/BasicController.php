@@ -30,6 +30,13 @@ class BasicController extends Controller
                 "data" => '',
                 "children" => [
                     array(
+                        "name" => '系统设置',
+                        "icon" => '',
+                        "m" => 'Admin',
+                        "c" => 'set_sys',
+                        "a" => 'index',
+                        "data" => '',
+                    ),array(
                         "name" => '管理员列表',
                         "icon" => '',
                         "m" => 'Admin',
@@ -46,38 +53,63 @@ class BasicController extends Controller
                     ),
                 ]
             ),
-            // array(
-            //     "name" => '优惠券管理',
-            //     "icon" => 'cog',
-            //     "m" => 'Admin',
-            //     "c" => 'set',
-            //     "a" => 'index',
-            //     "data" => '',
-            //     "children" => [
-            //         array(
-            //             "name" => '优惠券列表',
-            //             "icon" => '',
-            //             "m" => 'Admin',
-            //             "c" => 'set',
-            //             "a" => 'index',
-            //             "data" => '',
-            //         ),array(
-            //             "name" => '优惠券礼包',
-            //             "icon" => '',
-            //             "m" => 'Admin',
-            //             "c" => 'set',
-            //             "a" => 'index',
-            //             "data" => '',
-            //         ),array(
-            //             "name" => '领取日志',
-            //             "icon" => '',
-            //             "m" => 'Admin',
-            //             "c" => 'set',
-            //             "a" => 'index',
-            //             "data" => '',
-            //         ),
-            //     ]
-            // ),
+            array(
+                "name" => '题库管理',
+                "icon" => 'cog',
+                "m" => 'Admin',
+                "c" => 'questions',
+                "a" => 'questions-list',
+                "data" => '',
+                "children" => [
+                    array(
+                        "name" => '题库列表',
+                        "icon" => '',
+                        "m" => 'Admin',
+                        "c" => 'Questions',
+                        "a" => 'questions-list',
+                        "data" => '',
+                    )
+                ]
+            ),
+            array(
+                "name" => '会员管理',
+                "icon" => 'cog',
+                "m" => 'Admin',
+                "c" => 'user',
+                "a" => 'user-list',
+                "data" => '',
+                "children" => [
+                    array(
+                        "name" => '会员列表',
+                        "icon" => '',
+                        "m" => 'Admin',
+                        "c" => 'user',
+                        "a" => 'user-list',
+                        "data" => '',
+                    ),array(
+                        "name" => '答题日志',
+                        "icon" => '',
+                        "m" => 'Admin',
+                        "c" => 'user',
+                        "a" => 'answer_log',
+                        "data" => '',
+                    ),array(
+                        "name" => '成功日志',
+                        "icon" => '',
+                        "m" => 'Admin',
+                        "c" => 'user',
+                        "a" => 'success_log',
+                        "data" => '',
+                    ),array(
+                        "name" => '求助日志',
+                        "icon" => '',
+                        "m" => 'Admin',
+                        "c" => 'user',
+                        "a" => 'help_log',
+                        "data" => '',
+                    ),
+                ]
+            ),
         ];
         return true;
     }
