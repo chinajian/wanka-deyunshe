@@ -27,7 +27,7 @@ class QuestionsController extends BasicController
     	$questionsModel = Questions::find();
         $count = $questionsModel->count();
         $pageSize = Yii::$app->params['pageSize'];
-        $questionList = $questionsModel->with('answer')->offset($pageSize*($currPage-1))->limit($pageSize)->asArray()->all();
+        $questionList = $questionsModel->orderBy(['qid' => SORT_DESC])->with('answer')->offset($pageSize*($currPage-1))->limit($pageSize)->asArray()->all();
         // P($questionList);
     	return $this->render('questionList', [
             'questionList' => $questionList,

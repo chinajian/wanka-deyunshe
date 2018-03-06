@@ -76,10 +76,10 @@
 		current: <?php echo $pageInfo['currPage']?>,
 		pageSizeList: [5, 10, 15, 20 ,50],
 		changePagesize: function(currPage){
-			window.location.href = "<?php echo Url::to(['questions/question-list'])?>?page=" + currPage;
+			window.location.href = "<?php echo Url::to(['questions/question-list'])?>&page=" + currPage;
 		},
 		callback: function (currPage, size, count) {
-			window.location.href = "<?php echo Url::to(['questions/question-list'])?>?page=" + currPage;
+			window.location.href = "<?php echo Url::to(['questions/question-list'])?>&page=" + currPage;
 		}
 	});
 </script>
