@@ -60,6 +60,9 @@ $config = [
         'admin' => [
             'class' => 'app\modules\admin\admin',
         ],
+        'api' => [
+            'class' => 'app\modules\api\api',
+        ],
     ],
 ];
 
